@@ -68,14 +68,14 @@ nav a:focus {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
-/* Pseudo-Element: ::before to add a decorative line under headings */
 .content-section h2 {
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
     color: #2c3e50;
-    position: code;
+    position: relative; /* Fixed from position: code; */
 }
 
+/* Pseudo-Element: ::before to add a decorative line under headings */
 .content-section h2::before {
     content: "";
     display: block;
@@ -96,7 +96,7 @@ nav a:focus {
     line-height: 1;
 }
 
-/* CSS Image Gallery Grid (30 points) */
+/* CSS Image Gallery Grid */
 .image-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -119,13 +119,11 @@ nav a:focus {
     transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
-/* Pseudo-Class: Hover effect on gallery images */
 .gallery-item:hover img {
     transform: scale(1.1);
     opacity: 0.8;
 }
 
-/* Gallery Caption Layer */
 .caption {
     position: absolute;
     bottom: 0;
@@ -140,12 +138,10 @@ nav a:focus {
     transition: transform 0.3s ease;
 }
 
-/* Pseudo-Class: Reveal caption on hover */
 .gallery-item:hover .caption {
     transform: translateY(0);
 }
 
-/* Pseudo-Class: :nth-child styling for alternating list/form items */
 .form-group {
     margin-bottom: 1rem;
 }
@@ -158,7 +154,6 @@ nav a:focus {
     transition: border-color 0.3s;
 }
 
-/* Pseudo-Class: :focus on input fields */
 .form-group input:focus {
     border-color: #1abc9c;
     box-shadow: 0 0 5px rgba(26, 188, 156, 0.3);
@@ -176,12 +171,10 @@ nav a:focus {
     transition: background-color 0.3s ease;
 }
 
-/* Pseudo-Class: Button hover state */
 .submit-btn:hover {
     background-color: #1abc9c;
 }
 
-/* Footer Styling */
 footer {
     text-align: center;
     padding: 1.5rem;
